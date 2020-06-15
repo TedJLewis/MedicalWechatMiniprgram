@@ -1,0 +1,2 @@
+# MedicalWechatMiniprgram
+皮肤病愈后管理系统是一款包含前后端的基于微信平台开发的小程序，其组成包括微信小程序+django+sqlite+xadmin
