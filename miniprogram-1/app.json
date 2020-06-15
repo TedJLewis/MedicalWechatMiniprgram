@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userInfo/userInfo",
+    "pages/logs/logs",
+    "pages/upload/upload",
+    "pages/track/track"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "navigationBarTitleText": "皮肤病愈后追踪",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+   "color":"#ccc",
+   "selectedColor": "#00D885",
+   "backgroundColor": "#F8F8FF",
+   "borderStyle": "white",
+  "list":[
+    {
+    "pagePath":"pages/index/index",
+    "text":"病况上传",
+    "iconPath":"images/photo2.png",
+    "selectedIconPath":"images/photo1.png"
+    },
+    {
+      "pagePath": "pages/track/track",
+      "text": "病况追踪",
+      "iconPath": "images/message5.png",
+      "selectedIconPath": "images/message4.png"
+    },
+    {
+      "pagePath": "pages/userInfo/userInfo",
+      "text": "我的信息",
+      "iconPath": "images/me3.png",
+      "selectedIconPath": "images/me4.png"
+    }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

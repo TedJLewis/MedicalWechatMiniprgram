@@ -1,0 +1,47 @@
+<view class="topBorder1">  </view>
+<image class="userinfo-avatar" src="/{{a}}" mode="cover"></image>
+<view class="my_list">
+        <view class="mylititle">历史上传病况记录</view>
+                <view class="wrap_li">
+                    <view class="blo"
+                          wx:for="{{reportData}}"
+                          data-id="{{item.upload_key}}"
+                          bindtap="skipDetail"
+                          wx:key="{{index}}">
+                        <image class="user_img" src="{{avatarimg}}"></image>
+                        <view class="right_li">
+                            <view class="title">
+                                <view>{{username}}</view>
+                                <!-- <view>删除记录</view>  -->
+                            </view>
+                            <view class="question">{{item.text}}</view>
+                            <view class="tu">
+                                <view style="width: 100vw;height: 10rpx" wx:if="{        {item.img.length < 1}}"></view>
+                                <view class="{{item.img.length == 1 ? 'yi' : item.img.length == 2 ? 'er' : 'san'}}"
+                                      wx:for="{{item.img}}"
+                                      wx:key="{{index}}"
+                                      wx:for-item="idx"
+                                      style="background-image: url(/{{idx}})">
+                                      
+                                </view>
+
+                            </view>
+
+                            <view class="foot">{{item.upload_time}}</view>
+
+                            </view>
+
+                            <!-- <view class="footer">
+                                <view class="data">{{item.upload_time}}</view>
+                                <view class="mes">
+                                    <image src="../../images/message1.png" mode="widthFix"></image>
+                                    <view>已回复</view>
+                                </view>
+                            </view>-->
+                            
+                        </view> 
+                    </view>
+
+                </view>
+		     
+    

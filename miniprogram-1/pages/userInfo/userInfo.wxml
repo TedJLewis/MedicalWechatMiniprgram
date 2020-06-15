@@ -1,0 +1,96 @@
+<!--pages/userInfo/userInfo.wxml-->
+
+<view class="topBorder1">  </view>
+<image class="userinfo-avatar" src="/images/horizontal3.jpg" mode="cover"></image>
+<view class="ava-item">
+<block wx:if="{{hasLogin==true}}">
+<image class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+<view class="userName">{{userInfo.nickName}}</view>
+</block>
+
+<block wx:if="{{hasLogin==false}}">
+<image class="avatar" src="/images/me3.png" mode="cover" ></image>
+<view>
+<button class="buttonName" open-type="getUserInfo" bindtap="login">点击登录</button>
+</view>
+
+<!--
+<view class="userName" bindtap="login">点击登录</view>
+-->
+</block>
+</view>
+
+<view class="item">
+<view class="gender">性别：</view>
+<block wx:if="{{text==false}}">
+<view class="gender">{{genderData}}</view>
+</block>
+
+<block wx:if="{{text==true}}">
+<view class="gender">
+<input class="input-gender" bindinput="bindKeyInput" maxlength="1"  placeholder="{{genderData}}"/>
+</view>
+</block>
+
+</view>
+
+<view class="item">
+<view class="gender">年龄：</view>
+<block wx:if="{{text==false}}">
+<view class="gender">{{age}}</view>
+</block>
+
+<block wx:if="{{text==true}}">
+<view class="gender">
+<input class="input-gender" bindinput="bindKeyInput2" maxlength="3"  placeholder="{{age}}"/>
+</view>
+</block>
+</view>
+
+<view class="item">
+<view class="gender">手机号：</view>
+<block wx:if="{{text==false}}">
+<view class="gender">{{mobile}}</view>
+</block>
+
+<block wx:if="{{text==true}}">
+<view class="gender">
+<input class="input-gender" bindinput="bindKeyInput3" maxlength="11"  placeholder="{{mobile}}"/>
+</view>
+</block>
+</view>
+
+<view class="item">
+<view class="gender">初诊时间：</view>
+<block wx:if="{{text==false}}">
+<view class="gender">{{firstTime}}</view>
+</block>
+
+<block wx:if="{{text==true}}">
+<view class="gender">
+<input class="input-gender" bindinput="bindKeyInput4" maxlength="20"  placeholder="{{firstTime}}"/>
+</view>
+</block>
+</view>
+
+
+
+<view class="buttonView">
+<button class="button" bindtap="textChange" wx:if="{{boolean==true}}">{{text1}}</button>
+<button class="button" bindtap="textChange" wx:else>{{text2}}</button>
+</view>
+
+<!-- <view class="buttonView">
+<button class="button" bindtap="doUpload" disabled="{{disabled}}">上传图片</button>
+</view>
+
+<view class="buttonView">
+<button class="button" bindtap="webTest" disabled="{{disabled}}">测试网络</button>
+</view>
+
+<view class="buttonView">
+<button class="button" bindtap="clearLogin" disabled="{{disabled}}">clearLogin</button>
+</view>
+
+
+ -->

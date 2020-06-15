@@ -1,0 +1,56 @@
+<!--index.wxml-->
+
+<view class="container">
+<view class="topBorder1">  </view>
+<image class="userinfo-avatar" src="/images/horizontal.jpg" mode="cover"></image>
+
+<!--<view class="topBorder">  </view>-->
+<!--
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="/images/horizontal.jpg" mode="cover"></image>
+     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  -->
+
+ <!-- <view class="belowBorder">  </view> -->
+ <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+-->
+</view>
+
+<!--
+<view class="firstLine" >
+   <view class="blue"><text class="captical">账号:</text></view>
+   <view class="red"><input class="input" placeholder="请输入账号"></input></view>
+</view>
+
+<view class="firstLine" >
+    <view class="blue"><text class="captical">密码:</text></view>
+    <view class="red"><input class="input" placeholder="请输入密码"></input></view>
+</view>
+-->
+<view class="topBorder2">  </view>
+<view class="mainContent">
+<textarea placeholder="请描述您的恢复情况:（可选）" bindinput="inputText"  auto-focus></textarea>
+</view>
+
+<view class="topBorder2">  </view>
+
+<view class="images-wrapper">
+<view class="images-text">请选择上传图片：</view>
+<view class="addImage">
+  <view wx:for="{{imageList}}" wx:for-item="image">
+  <image class="images-image" src="{{image}}"></image>
+  </view>
+  <image class="images-plus" src="/images/plus.png" bindtap="addImage"></image>
+</view>
+</view>
+<view class="buttonView">
+  
+  <button class="button" bindtap="upLoad">提交信息</button>
+  
+</view>
